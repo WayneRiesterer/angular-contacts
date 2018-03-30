@@ -1,0 +1,44 @@
+<form [formGroup]="addContactForm"
+      (ngSubmit)="onAddContact()">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Add Contact</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <label for="givenName">Given Name</label>
+          <input id="givenName" class="form-control" formControlName="givenName"
+                 placeholder="Given Name">
+        </div>
+        <div class="form-group">
+          <label for="familyName">Family Name</label>
+          <input id="familyName" class="form-control"
+                 formControlName="familyName"
+                 placeholder="Family Name">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+
+          <label for="emailAddress">Email Address</label>
+          <input id="emailAddress" type="email" class="form-control"
+                 formControlName="emailAddress"
+                 placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="daysSinceContacted">Days since contacted:</label>
+          <input class="form-control" type="number" id="daysSinceContacted"
+                 formControlName="daysSinceContacted" placeholder="Days since contacted">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button class="btn btn-primary" [disabled]="!addContactForm.valid">Add Contact</button>
+      </div>
+    </div>
+  </div>
+</form>

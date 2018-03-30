@@ -1,0 +1,14 @@
+<h2>Contacts</h2>
+<div class="list-group">
+  <a class="list-group-item list-group-item-action flex-column align-items-start"
+     *ngFor="let contact of contacts">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{ contact.givenName + ' ' + contact.familyName }}</h5>
+      <small>{{ contact.daysSinceContacted }} days</small>
+    </div>
+
+    <a href="mailto: {{ contact.emailAddress }}">{{ contact.emailAddress }}</a>
+  </a>
+</div>
+
+
